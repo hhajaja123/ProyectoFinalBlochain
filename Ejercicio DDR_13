@@ -1,0 +1,28 @@
+package ejercicio_poo_ddr_13;
+
+import java.io.IOException;
+
+
+public class Ejercicio_POO_DDR_13 {
+
+    public static void main(String[] args) {
+        System.out.println("Blockchain");
+        System.out.println("El Blockchain es un conjunto de tecnologías que permiten mantener un registro distribuido, descentralizado, sincronizado y muy seguro " 
+                + " de la información que trabajan ordenadores y otros dispositivos, es decir, vendría a cumplir la función de un registro público en las operaciones "
+                + "digitales, ya que permite identificar a cada persona y dispositivo de forma única y almacenar y trazar esa identificación en todo momento. En cualquier caso, "
+                + "como otras tecnologías, será común utilizarla aunque sigamos sin conocer en detalle cómo funciona, tal como pasa, a modo de ejemplo, con los formatos MP3 o MP4.");
+        
+        Test t=new Test();
+        //Permite registrar las Preguntas que se le van a realizar al usuario
+        try {
+            t.cargarFichero("preguntas-incorrecto.txt");
+            
+             t.realizarTest();
+        //Generar el Mensaje    
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+    }
+    
+}
